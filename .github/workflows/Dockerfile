@@ -18,3 +18,7 @@ EXPOSE 8000
 
 # Default command
 CMD ["python", "main.py"]
+
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y curl
+CMD ["echo", "Hello from Docker!"]
