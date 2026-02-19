@@ -17,7 +17,7 @@ jobs:
         run: docker build . --file Dockerfile --tag bricolage:latest
 
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache
           key: ${{ runner.os }}-build-${{ github.sha }}
