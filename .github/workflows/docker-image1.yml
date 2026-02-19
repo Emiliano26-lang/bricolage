@@ -29,4 +29,4 @@ jobs:
             name: my-artifact
             path: fonts/artifacts
             - name: Build Docker image
-            run: docker build . --file dockerfile.dev --tag my-image-name:$(date +%s)
+            run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
