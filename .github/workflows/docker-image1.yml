@@ -23,9 +23,8 @@ jobs:
           key: ${{ runner.os }}-build-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-build-
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-artifacts
-          path: ./build
+            - name: Upload build artifacts
+            uses: actions/upload-artifact@v4
+            with:
+            name: my-artifact
+            path: fonts/artifacts
