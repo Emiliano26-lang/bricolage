@@ -1,20 +1,20 @@
-# Use a lightweight base image
+# Base image
 FROM python:3.11-slim
 
-# Set working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy requirements first (for caching)
+# Copy requirements first (better caching)
 COPY requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of your project files
+# Copy project files
 COPY . .
 
-# Expose port if your app runs a server
+# Expose port if running a web server
 EXPOSE 8000
 
-# Default command to run your app
+# Default command
 CMD ["python", "main.py"]
