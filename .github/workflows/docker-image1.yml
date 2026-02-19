@@ -29,3 +29,5 @@ jobs:
         with:
           name: build-artifacts
           path: ./build
+
+          run: docker build . --file docker/Dockerfile --tag bricolage:latest
