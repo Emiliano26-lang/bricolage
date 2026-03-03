@@ -50,6 +50,8 @@ jobs:
         done
     - name: Build font
       run: make build
+    - name: Validate glyph coverage
+      run: python scripts/validate_glyphs.py --check U+203D
     - name: Check with fontbakery
       run: make test
       continue-on-error: true
